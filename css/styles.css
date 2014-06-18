@@ -1,0 +1,229 @@
+.contain{
+	width: 90%;
+	margin: 0 auto;
+}
+
+header{
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	color: white;
+	z-index: 100;
+}
+
+.top-bar{
+	background-color:  !important;
+}
+
+
+
+header h1{
+	color: white;
+}
+
+
+header nav ul li a{
+	color: white;
+	padding: 5px 10px;
+}
+
+header nav ul li a:hover{
+	color: white;
+	border: 1px solid white;
+}
+
+.intro{
+	width: 100%;
+	min-height: 500px;
+	background-image: url(../imgs/introbg.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.intro h2{
+	padding: 160px 0 0 20px;
+	color: white;
+	font-size: 55px;
+	  font-family: "open-sans", "Helvetica";
+
+}
+
+.greeting{
+	width: 100%;
+	min-height: 650px;
+}
+
+.greeting h3{
+	text-align: center;
+	padding: 50px 0 0 0;
+	font-size: 50px;
+
+}
+
+.greeting h3 span{
+	font-size: 25px;
+}
+
+.greetingtext{
+	margin: 50px 0 0 0;
+}
+
+
+
+
+.myManifesto{
+	width: 100%;
+	min-height: 500px;
+	background-color: #66c0e3;
+	color: white;
+	padding: 0 0 50px 0;
+
+}
+
+.myManifesto h1{
+	padding: 50px 0 50px 0;
+	text-align: center;
+	color: white;
+	text-transform: uppercase;
+
+}
+
+.myManifesto p span{
+	text-transform: uppercase;
+	font-size: 25px;
+	letter-spacing: 1px;
+}
+
+.services{
+	width: 100%;
+	min-height: 600px;
+	padding: 0 0 50px 0;
+}
+
+.services h5{
+	text-align: center;
+	padding: 50px 0 50px 0;
+	text-transform: uppercase;
+	font-size: 35px;
+}
+
+.servicebuttons{
+	margin: 50px 0 0 0;
+}
+
+.buttonwrap{
+	width: 250px;
+	margin: 0 auto;
+}
+
+
+
+.selectwork{
+	width: 100%;
+	background-color: #66c0e3;
+	min-height: 450px;
+	color: white;
+}
+
+.selectwork h5{
+	text-align: center;
+	padding: 50px 0 50px 0;
+	text-transform: uppercase;
+	font-size: 35px;
+	color: white;
+
+}
+
+.workitems img{
+	width: 200px;
+	margin: 5px 20px 5px 5px;
+}
+
+.workitems h6{
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 0 0 0 20px;
+	color: white;
+
+}
+
+.workitems h6 span{
+	font-weight: normal;
+}
+
+.workitems p{
+	clear: right;
+}
+
+
+.contact{
+	width: 100%;
+	min-height: 500px;
+
+}
+
+.contact h5{
+	text-align: center;
+	padding: 50px 0 50px 0;
+	font-size: 50px;
+}
+
+.contact input{
+	border: 1px solid black;
+}
+
+.contact textarea{
+	border: 1px solid black;
+}
+.contact textarea:focus{
+	box-shadow: none;
+}
+
+.contact input:focus{
+	box-shadow: none;
+}
+
+.contact input.submit{
+	width: 100%;
+	height: 30px;
+	background-color: white;
+	border: 1px solid black;
+	text-transform: uppercase;
+	font-size: 20px;
+}
+
+.contact input.submit:hover{
+	color: #6bc926;
+}
+
+
+footer{
+	width: 100%;
+	min-height: 125px;
+	background-color: #4b91c6;
+	text-align: center;
+}
+
+.footerabout{
+	margin: 50px 0 0 0;
+	color: white;
+	letter-spacing: 1px;
+}
+
+.footerabout a{
+	color: white;
+	text-decoration: underline;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 580px) {
+/* Styles */
+
+.greetingtext img{
+	margin: 0;
+}
+
+}
