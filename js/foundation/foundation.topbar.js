@@ -1,8 +1,9 @@
 ;(function ($, window, document, undefined) {
   'use strict';
 
-
   Foundation.libs.topbar = {
+
+
     name : 'topbar',
 
     version: '5.2.2',

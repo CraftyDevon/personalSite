@@ -11,15 +11,32 @@
 		<script src="js/vendor/modernizr.js"></script>
         <script src="js/foundation/foundation.js"></script>
 		<script src="js/foundation/foundation.topbar.js"></script>
-		
+
 		<script>
 					$(document).scroll(function(){
 
-					$("#topnav").css({"background-color":"#66c0e3"});
+					$("header").css({"background-color":"#66c0e3"});
 
 				});
    
 
+		</script>
+
+		<script>
+			$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
 		</script>
 
 	</head>
@@ -27,7 +44,7 @@
 
 
 		<header>
-			<nav class="top-bar fixed" id="topnav" data-topbar>
+			<nav class="top-bar fixed" data-topbar>
 
 			<div class="contain">
 
@@ -43,10 +60,10 @@
   <section class="top-bar-section">
     <!-- Right Nav Section -->
     <ul class="right">
-      <li><a href="#">BIO</a></li>
-      <li><a href="#">SERVICES</a></li>
-      <li><a href="#">WORK</a></li>
-      <li><a href="#">CONTACT</a></li>
+      <li><a href="#greeting">BIO</a></li>
+      <li><a href="#services">SERVICES</a></li>
+      <li><a href="#work">WORK</a></li>
+      <li><a href="#contact">CONTACT</a></li>
       <li><a href="#">BLOG</a></li>
     
     </ul>
@@ -68,7 +85,7 @@
 		</div><!--end intro-->
 
 
-		<div class="greeting">
+		<div id="greeting" class="greeting">
 				
 				<div class="row medium-centered">
 
@@ -123,7 +140,7 @@
 		
 		
 		
-		<div class="myManifesto">
+		<div id="manifesto" class="myManifesto">
 
         <h1>My Manifesto</h1>
         
@@ -149,7 +166,7 @@
       </div><!--end my Manifesto-->
 
 
-		<div class="services">
+		<div id="services" class="services">
 
 			<div class="row medium-centered">
 				
@@ -256,42 +273,77 @@
 
 
 
-		<div class="selectwork">
+		<div id="work" class="selectwork">
 
 			<div class="row medium-centered">
 
 				<h5>Select Work</h5>
 				
-				<div class="workitems">
+					<ul class="workSlider" data-orbit>
+						  <li data-orbit-slide="headline-1">
+						    <div>
+						    	<div class="row small-centered">
 
-				<div class="medium-6 columns">
+						    		<div class="workitem">
+						    		
+						    		<div class="medium-4 columns">
+						    			<img src="imgs/mindview.png" alt="" class="left">
+									</div><!--end 4 col-->
 
-				<img src="imgs/mindview.png" alt="" class="left">
-
-				<h6>Mind View <br><span>App Dev/UI-UX</span></h6>
+						    		<div class="medium-8 columns">
+						    			
+						    			<h6>Mind View <br><span>App Dev/UI-UX</span></h6>
 				
-				<p>Mindview provides a platform for mental healthcare providers to monitor their patients and collect crucial data. Built with Angular and Firebase, it's a forward looking Javascript application.</p>
+				<p>Mindview is the mood journal of the 21st Century, allowing mental health providers a solution to monitor their patients daily experiences in order to better serve them. It's powered by Angular and Firebase.</p>
+											
+											<div class="buttonwrap">
+					<a href="https://github.com/CraftyDevon/MindView" class="button [radius round] medium-centered">CHECK IT OUT ON GITHUB</a>
+					</div>
+										
+
 					
+						    		</div><!--end 8 col-->
 
-				</div><!--end col-->
 
-				<div class="medium-6 columns">
+						    	</div><!--end work item-->
 
-				<img src="imgs/apm.png" alt="" class="left">
+							</div><!--end row-->
+						    </div><!--end div-->
+						  </li>
+						  <li data-orbit-slide="headline-2">
+						    <div>
+						   <div class="row small-centered">
 
+						   <div class="workitem">
+						    		
+						    		<div class="medium-4 columns">
+						    			<img src="imgs/apm.png" alt="" class="left">
+									</div>
+
+						    		<div class="medium-8 columns">
+						    			
 				<h6>All Propane Mowers <br><span>Wordpress</span></h6>
 				
-				<p>All Propane Mowers wanted to move away from their legacy CMS so they partnered with me to transition to the Wordpress platform and provide their mobile users a better experience.</p>
+			<p>All Propane Mowers wanted to move away from their legacy CMS so they partnered with me to transition to the Wordpress platform and provide their mobile users a better experience.</p>
 
-					
-
-					
-				</div><!--end col-->
-
-
-				</div><!--end work items-->
+				<div class="buttonwrap">
+					<a href="#" class="button [radius round] medium-centered">COMING SOON</a>
+					</div>
 
 
+						    		</div>
+
+
+						    	</div>
+									</div>
+						    </div>
+						  </li>
+						  
+
+
+
+
+						</ul>
 
 
 
@@ -303,7 +355,7 @@
 
 
 
-			<div class="contact">
+			<div id="contact" class="contact">
 
 			<div class="row medium-centered">
 
@@ -321,22 +373,26 @@
 
 			<div class="medium-6 columns">
 
-				<form action="">
+				<form method="post" action="form.php" >
 
 					<div class="row">
 
 						<div class="medium-6 columns">
 
-							<input type="text" placeholder="What's your name?">
-							<input type="email" placeholder="What's your email?">
-							<input type="text" placeholder="What's your Phone Number?">
+							<input name="name" type="text" placeholder="What's your name?">
+							<input name="email" type="email" placeholder="What's your email?">
+							<input name="phone" type="text" placeholder="What's your Phone Number?">
 	
 
 						</div><!--end col-->
 						
 						<div class="medium-6 columns">
 								
-							<textarea name="" id="" cols="30" rows="10" placeholder="Tell me more about your project!"></textarea>
+							<textarea name="message" id="" cols="30" rows="10" placeholder="Tell me more about your project!"></textarea>
+
+
+							<input name="human" class="human" placeholder="*What is 2+2? (Anti-spam)">
+
 
 							    <input id="submit" name="submit" class="submit"  type="submit" value="Submit">
 
@@ -384,6 +440,10 @@
 
 			</footer><!--end footer-->
 
+				<script src="js/foundation/foundation.orbit.js"></script>
 
+<script>
+  $(document).foundation();
+</script>
  </body>
  </html>

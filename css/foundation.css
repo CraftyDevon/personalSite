@@ -1362,7 +1362,8 @@ meta.foundation-mq-topbar {
     font-size: 0.8125rem;
     font-weight: normal;
     text-transform: none;
-    /*background: #333333;*/ }
+      background-color: #66c0e3;
+ }
     .top-bar-section ul li > a.button {
       font-size: 0.8125rem;
       padding-right: 15px;

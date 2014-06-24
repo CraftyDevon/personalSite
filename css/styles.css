@@ -22,16 +22,16 @@ header h1{
 }
 
 
-header nav ul li a{
+/*header nav ul li a{
 	color: white;
 	padding: 5px 10px;
-}
+}*/
+
 
 header nav ul li a:hover{
 	color: white;
 	border: 1px solid white;
 }
-
 .intro{
 	width: 100%;
 	min-height: 500px;
@@ -111,11 +111,16 @@ header nav ul li a:hover{
 	margin: 50px 0 0 0;
 }
 
-.buttonwrap{
+.servicebuttons .buttonwrap{
 	width: 250px;
 	margin: 0 auto;
 }
 
+.specialized img{
+	margin: 0 auto 20px auto;
+width: 80%;
+display: block;
+}
 
 
 .selectwork{
@@ -139,21 +144,25 @@ header nav ul li a:hover{
 	margin: 5px 20px 5px 5px;
 }
 
-.workitems h6{
+.workitem h6{
 	text-transform: uppercase;
 	font-size: 18px;
 	font-weight: bold;
-	padding: 0 0 0 20px;
 	color: white;
 
 }
 
 .workitems h6 span{
 	font-weight: normal;
+	color: white;
 }
 
 .workitems p{
 	clear: right;
+}
+
+.workitem{
+	padding: 20px 200px;
 }
 
 
@@ -216,14 +225,13 @@ footer{
 	text-decoration: underline;
 }
 
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 580px) {
-/* Styles */
+ 	 	.orbit-container .orbit-slide-number{display: none;}
+ 	 	.orbit-container .orbit-timer{display: none;}
 
-.greetingtext img{
-	margin: 0;
-}
+@media (max-width: 600px) {
+ 	.workitem{padding: 20px;}
+
+ 	.orbit-container .orbit-next > span{display: none;}
+ 	 	.orbit-container .orbit-last > span{display: none;}
 
 }
