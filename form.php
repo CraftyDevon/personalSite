@@ -4,7 +4,7 @@
     $phone = $_POST['phone'];
     $message = $_POST['message'];
     $headers = 'From: The Kraft of Story Telling <craftygr@webster.site5.com>';
-    $to = 'devon@devonhicks.com.com'; 
+    $to = 'devon@thekraftofstorytelling.com'; 
     $subject = 'Hello';
     $human = $_POST['human'];
 			
